@@ -42,7 +42,7 @@ nav svg {
 
 @media (max-width: 992px) {
   #slider .carousel-item {
-    height: calc(100vh - 133px + 32px);
+    height: calc(100vh - 133px + 17px);
   }
 }
 

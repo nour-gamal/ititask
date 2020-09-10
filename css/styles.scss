@@ -36,7 +36,7 @@ nav {
     background-size: cover;
     height: calc(100vh - 133px);
     @media (max-width: 992px) {
-      height: calc(100vh - 133px + 32px);
+      height: calc(100vh - 133px + 17px);
     }
     & > h2 {
       background: rgba(0, 0, 0, 0.7);
