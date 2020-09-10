@@ -1,0 +1,70 @@
+/*Start global rules*/
+body {
+  background: #121212;
+  color: #dbdbdb;
+}
+
+$mainColor: #bf272d;
+/*End global rules*/
+/*Start navbar*/
+nav {
+  background-color: #dbdbdb;
+  color: #1f1f1f;
+  ul {
+    li {
+      margin: auto;
+      cursor: pointer;
+      padding-bottom: 10px;
+      font-weight: 600;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+  svg {
+    margin: auto;
+    cursor: pointer;
+  }
+}
+/*end navbar*/
+/*Start slider*/
+#slider {
+  @media (min-width: 991px) {
+    margin-top: -17px;
+  }
+  .carousel-item {
+    background-size: cover;
+    height: calc(100vh - 133px);
+    @media (max-width: 992px) {
+      height: calc(100vh - 133px + 32px);
+    }
+    & > h2 {
+      background: rgba(0, 0, 0, 0.7);
+      height: 100%;
+      & > span {
+        color: $mainColor;
+      }
+    }
+
+    &:first-of-type {
+      background-image: url("/imgs/carousal/1.jpg");
+    }
+    &:nth-of-type(2) {
+      background-image: url("/imgs/carousal/2.jpg");
+    }
+    &:nth-of-type(3) {
+      background-image: url("/imgs/carousal/3.jpg");
+    }
+  }
+
+  .carousel-indicators > li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    &.active {
+      background-color: $mainColor;
+    }
+  }
+}
+
+/*End slider*/

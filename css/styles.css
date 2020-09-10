@@ -1,0 +1,81 @@
+/*Start global rules*/
+body {
+  background: #121212;
+  color: #dbdbdb;
+}
+
+/*End global rules*/
+/*Start navbar*/
+nav {
+  background-color: #dbdbdb;
+  color: #1f1f1f;
+}
+
+nav ul li {
+  margin: auto;
+  cursor: pointer;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+nav ul li:hover {
+  color: #bf272d;
+}
+
+nav svg {
+  margin: auto;
+  cursor: pointer;
+}
+
+/*end navbar*/
+/*Start slider*/
+@media (min-width: 991px) {
+  #slider {
+    margin-top: -17px;
+  }
+}
+
+#slider .carousel-item {
+  background-size: cover;
+  height: calc(100vh - 133px);
+}
+
+@media (max-width: 992px) {
+  #slider .carousel-item {
+    height: calc(100vh - 133px + 32px);
+  }
+}
+
+#slider .carousel-item > h2 {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+}
+
+#slider .carousel-item > h2 > span {
+  color: #bf272d;
+}
+
+#slider .carousel-item:first-of-type {
+  background-image: url("/imgs/carousal/1.jpg");
+}
+
+#slider .carousel-item:nth-of-type(2) {
+  background-image: url("/imgs/carousal/2.jpg");
+}
+
+#slider .carousel-item:nth-of-type(3) {
+  background-image: url("/imgs/carousal/3.jpg");
+}
+
+#slider .carousel-indicators > li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#slider .carousel-indicators > li.active {
+  background-color: #bf272d;
+}
+
+/*End slider*/
+/*# sourceMappingURL=styles.css.map */
