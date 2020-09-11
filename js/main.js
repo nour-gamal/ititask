@@ -1,41 +1,54 @@
 $(function () {
-  var flag = 0;
+  /*Handling the compressed list button */
   $("#barButton").on("click", function () {
-    if (flag == 0) {
-      $("#compressedList").fadeIn(200).removeClass("d-none");
-      flag = 1;
-    } else {
-      $("#compressedList").fadeOut(200);
-      flag = 0;
+    $("#compressedList").fadeToggle(200).toggleClass("d-none");
+  });
+  var loginflag = 0;
+  /*Handling the login page */
+  $("#compressedList > li:first-of-type").on("click", function () {
+    if (loginflag == 0) {
+      $("#slider").fadeOut(10);
+      $(this).css("color", "#bf272d");
+      $("#loginPage").fadeIn(500).removeClass("d-none");
+      $("#warning").html(" ");
     }
   });
-});
 
-var f = 0;
-$("#x").on("click", function () {
-  if (f == 0) {
-    $(".slide2").css("marginLeft", "0").css("display", "block");
-    $(".slide3").css("marginLeft", "-100vw").css("display", "none");
-    $(".slide4").css("marginLeft", "-200vw").css("display", "none");
-    $(".slide1").css("marginLeft", "-300vw").css("display", "none");
-    f = 1;
-  } else if (f == 1) {
-    $(".slide3").css("marginLeft", "0").css("display", "block");
-    $(".slide4").css("marginLeft", "-100vw").css("display", "none");
-    $(".slide1").css("marginLeft", "-200vw").css("display", "none");
-    $(".slide2").css("marginLeft", "-300vw").css("display", "none");
-    f = 2;
-  } else if (f == 2) {
-    $(".slide4").css("marginLeft", "0").css("display", "block");
-    $(".slide1").css("marginLeft", "-100vw").css("display", "none");
-    $(".slide2").css("marginLeft", "-200vw").css("display", "none");
-    $(".slide3").css("marginLeft", "-300vw").css("display", "none");
-    f = 3;
-  } else {
-    $(".slide1").css("marginLeft", "0").css("display", "block");
-    $(".slide2").css("marginLeft", "-100vw").css("display", "none");
-    $(".slide3").css("marginLeft", "-200vw").css("display", "none");
-    $(".slide4").css("marginLeft", "-300vw").css("display", "none");
-    f = 0;
-  }
+  /*Handling student login */
+  $("#loginButton").on("click", function (e) {
+    e.preventDefault();
+    var email = $("#email").val();
+    var password = $("#password").val();
+    var name = email.split("@");
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(function (result) {
+        loginflag = 1;
+        $("#warning")
+          .html("Wellcome " + email)
+          .css("color", "green");
+        $("#loginPage").fadeOut(200);
+        $("#dashboard").fadeIn(200);
+        $("#wellcomeDashboard")
+          .html(name[0] + "'s " + "Dashboard")
+          .css("color", "#bf272d");
+        $("#compressedList>li:first-of-type").on("click", function () {});
+      })
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        $("#warning").html(errorMessage).css("color", "#bf272d");
+      });
+  });
+
+  /*Handling logout button */
+  $("#logout").on("click", function () {
+    $("#slider").fadeIn(200);
+    $("#dashboard").fadeOut(100);
+    $("#compressedList > li:first-of-type").css("color", "#1f1f1f");
+
+    loginflag = 0;
+  });
 });

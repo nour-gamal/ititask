@@ -1,11 +1,19 @@
-/*Start global rules*/
-body {
-  background: #121212;
-  color: #dbdbdb;
+/*Start global rules and framework*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
-
+body {
+  background-color: #dbdbdb;
+}
 $mainColor: #bf272d;
-/*End global rules*/
+
+.toUpperCase {
+  text-transform: uppercase;
+}
+/*End global rules and framework*/
 /*Start navbar*/
 nav {
   background-color: #dbdbdb;
@@ -31,10 +39,12 @@ nav {
 #slider {
   @media (min-width: 991px) {
     margin-top: -17px;
+    //  display: none;
   }
   .carousel-item {
     background-size: cover;
     height: calc(100vh - 133px);
+    color: #dbdbdb;
     @media (max-width: 992px) {
       height: calc(100vh - 100px);
     }
@@ -68,3 +78,103 @@ nav {
 }
 
 /*End slider*/
+/*Start login Page*/
+
+#loginPage {
+  padding-top: 30px;
+  height: calc(100vh - 133px);
+  //display: none;
+
+  @media (max-width: 992px) {
+    height: calc(100vh - 100px);
+  }
+  @media (min-width: 991px) {
+    margin-top: -17px;
+  }
+
+  * {
+    margin: 10px 0px;
+  }
+  h3 {
+    color: $mainColor;
+    margin-bottom: 20px;
+  }
+  input,
+  button {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 9px;
+    -webkit-box-shadow: 2px 2px 9px;
+    -moz-box-shadow: 2px 2px 9px;
+    -o-box-shadow: 2px 2px 9px;
+
+    background-color: #dbdbdb;
+    padding: 10px 20px;
+  }
+  button {
+    width: 150px;
+    background-color: $mainColor;
+    box-shadow: 2px 2px 9px $mainColor;
+    -moz-box-shadow: 2px 2px 9px $mainColor;
+    -webkit-box-shadow: 2px 2px 9px $mainColor;
+    -o-box-shadow: 2px 2px 9px $mainColor;
+
+    color: #dbdbdb;
+  }
+}
+/*End of login Page*/
+
+/*Start dashboard page*/
+
+#dashboard {
+  display: none;
+  min-height: calc(100vh - 133px);
+  margin-top: -17px;
+  padding: 10px;
+  #logout {
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+    &:hover {
+      color: $mainColor;
+    }
+  }
+  .card {
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #dbdbdb;
+    border: 2px solid;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 3px 2px 3px;
+      -moz-box-shadow: 3px 2px 3px;
+      -webkit-box-shadow: 3px 2px 3px;
+      -o-box-shadow: 3px 2px 3px;
+    }
+    &:first-of-type {
+      color: #0275d8;
+    }
+    &:nth-of-type(2) {
+      color: #aa66cc;
+    }
+
+    &:nth-of-type(3) {
+      color: #00c851;
+    }
+    &:nth-of-type(4) {
+      color: #ff4444;
+    }
+
+    &:nth-of-type(5) {
+      color: #4285f4;
+    }
+  }
+}
+/*End dashboard page*/

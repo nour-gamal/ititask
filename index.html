@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ITI</title>
+    <link rel="icon" href="imgs/icon.png" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -81,6 +82,95 @@
     </div>
 
     <!--End carousal-->
+    <!--The login Page-->
+    <section id="loginPage" class="d-none">
+      <form class="text-center">
+        <h3>Student Login</h3>
+        <img src="imgs/student.ico" height="120" />
+        <div>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="Student Email"
+          />
+        </div>
+        <div>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <button id="loginButton">Login</button>
+        <div id="warning"></div>
+      </form>
+    </section>
+    <!--End of login Page-->
+
+    <!--Start dashboard Page-->
+    <section id="dashboard" class="text-center">
+      <div id="logout" class="float-right">Logout</div>
+      <h2 id="wellcomeDashboard" class="toUpperCase"></h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-4 offset-1 card">
+            <i class="fas fa-bookmark fa-3x mx-auto mt-5"></i>
+            <h5 class="mt-3">Course registration</h5>
+          </div>
+
+          <div class="col-lg-3 col-4 offset-1 card">
+            <i class="fas fa-bullhorn fa-3x mx-auto mt-5"></i>
+            <h5 class="mt-3">Announcements</h5>
+          </div>
+          <div class="col-lg-3 col-4 offset-1 card">
+            <i class="fas fa-book fa-3x mx-auto mt-5"></i>
+            <h5 class="mt-3">Assignments</h5>
+          </div>
+          <div class="col-lg-3 col-4 offset-1 card">
+            <i class="fas fa-home fa-3x mx-auto mt-5"></i>
+            <h5 class="mt-3">Curriculum</h5>
+          </div>
+          <div class="col-lg-3 col-4 offset-1 card">
+            <i class="fas fa-poll fa-3x mx-auto mt-5"></i>
+            <h5 class="mt-3">Results</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End dashboard Page-->
+    <!-----------------------------------Start firebase SDK-------------------------------------------------->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyByw6whl7UTE2kjiuaIX23sOsjHA7ugVaY",
+        authDomain: "iti-task-8de43.firebaseapp.com",
+        databaseURL: "https://iti-task-8de43.firebaseio.com",
+        projectId: "iti-task-8de43",
+        storageBucket: "iti-task-8de43.appspot.com",
+        messagingSenderId: "870171577045",
+        appId: "1:870171577045:web:3b5832ea3932533efaf05c",
+        measurementId: "G-XD017R5BQV",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <!-----------------------------------Start firebase SDK-------------------------------------------------->
+
     <script src="js/all.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
