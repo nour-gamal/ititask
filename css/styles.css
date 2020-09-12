@@ -144,7 +144,11 @@ nav svg {
   display: none;
   min-height: calc(100vh - 133px);
   margin-top: -17px;
-  padding: 60px 0 0 0;
+}
+
+#dashboard h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #dashboard #logout {
@@ -199,4 +203,71 @@ nav svg {
 }
 
 /*End dashboard page*/
+/*Start registration page*/
+#courseReg {
+  display: none;
+}
+
+#courseReg h2 {
+  color: #bf272d;
+}
+
+#courseReg #regselect,
+#courseReg #selected {
+  height: calc(100vh - 336px);
+  border-radius: 20px;
+  border: 1px solid;
+  margin: 20px;
+  overflow: auto;
+  box-shadow: 2px 2px 9px;
+  -webkit-box-shadow: 2px 2px 9px;
+  -moz-box-shadow: 2px 2px 9px;
+  -o-box-shadow: 2px 2px 9px;
+}
+
+#courseReg #regselect::-webkit-scrollbar,
+#courseReg #selected::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  #courseReg #regselect,
+  #courseReg #selected {
+    height: calc(100vh - 166px);
+  }
+}
+
+#courseReg #regselect ul li,
+#courseReg #selected ul li {
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+#courseReg #regselect ul li:hover,
+#courseReg #selected ul li:hover {
+  background-color: #bf272d;
+  color: #dbdbdb;
+}
+
+#courseReg button {
+  background-color: #bf272d;
+  color: #dbdbdb;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 9px;
+  -webkit-box-shadow: 2px 2px 9px;
+  -moz-box-shadow: 2px 2px 9px;
+  -o-box-shadow: 2px 2px 9px;
+  font-size: 20px;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+}
+
+#courseReg button:hover {
+  color: #bf272d;
+  background-color: #dbdbdb;
+}
+
+/*End registration page*/
 /*# sourceMappingURL=styles.css.map */

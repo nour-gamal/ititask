@@ -51,4 +51,14 @@ $(function () {
 
     loginflag = 0;
   });
+
+  /*Handling registration page */
+  $("#courseRegCard").on("click", function () {
+    $("#dashboard").fadeOut(10);
+    $("#courseReg").fadeIn(400);
+  });
+  $("#regselect>ul>li").on("click", function () {
+    $(this).clone().appendTo("#selected > ul");
+    $(this).fadeOut(20);
+  });
 });
