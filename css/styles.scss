@@ -36,10 +36,10 @@ nav {
 }
 /*end navbar*/
 /*Start slider*/
+
 #slider {
   @media (min-width: 991px) {
     margin-top: -17px;
-    //  display: none;
   }
   .carousel-item {
     background-size: cover;
@@ -233,5 +233,40 @@ nav {
     color: $mainColor;
     background-color: #dbdbdb;
   }
+  #regBack {
+    cursor: pointer;
+  }
 }
 /*End registration page*/
+/*Start Assignment page*/
+#assignmentPage {
+  display: none;
+  h2 {
+    color: $mainColor;
+  }
+  button {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 9px;
+    -webkit-box-shadow: 2px 2px 9px;
+    -moz-box-shadow: 2px 2px 9px;
+    -o-box-shadow: 2px 2px 9px;
+    background-color: #dbdbdb;
+    padding: 10px 20px;
+  }
+  #assignmentsBack {
+    cursor: pointer;
+  }
+}
+/*End of Assignment page*/
+/*Start Announcement page*/
+#announcementPage {
+  display: none;
+  h2 {
+    color: $mainColor;
+  }
+  #announcementBack {
+    cursor: pointer;
+  }
+}
+/*End Announcement page*/

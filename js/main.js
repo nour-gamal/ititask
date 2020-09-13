@@ -56,9 +56,44 @@ $(function () {
   $("#courseRegCard").on("click", function () {
     $("#dashboard").fadeOut(10);
     $("#courseReg").fadeIn(400);
+    $("#regselect").fadeIn(10);
+    $("#regSubmit").fadeIn(10);
+    $("#submitStatus").html("");
+
+    $("#regBack").on("click", function () {
+      $("#courseReg").fadeOut(10);
+      $("#dashboard").fadeIn(400);
+    });
   });
   $("#regselect>ul>li").on("click", function () {
     $(this).clone().appendTo("#selected > ul");
     $(this).fadeOut(20);
+  });
+  $("#regSubmit").on("click", function () {
+    $("#regselect").fadeOut(10);
+    $(this).fadeOut(10);
+    $("#submitStatus").html(
+      "Congrats, you submit successfully and your Registration card is ready."
+    );
+  });
+
+  /*Handling Assignment page */
+  $("#assignmentCard").on("click", function () {
+    $("#dashboard").fadeOut(10);
+    $("#assignmentPage").fadeIn(400);
+  });
+  $("#assignmentsBack").on("click", function () {
+    $("#assignmentPage").fadeOut(10);
+    $("#dashboard").fadeIn(400);
+  });
+
+  /*Start handling announcement page */
+  $("#announcementCard").on("click", function () {
+    $("#dashboard").fadeOut(10);
+    $("#announcementPage").fadeIn(400);
+  });
+  $("#announcementBack").on("click", function () {
+    $("#announcementPage").fadeOut(10);
+    $("#dashboard").fadeIn(400);
   });
 });

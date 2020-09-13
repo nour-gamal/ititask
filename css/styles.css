@@ -269,5 +269,48 @@ nav svg {
   background-color: #dbdbdb;
 }
 
+#courseReg #regBack {
+  cursor: pointer;
+}
+
 /*End registration page*/
+/*Start Assignment page*/
+#assignmentPage {
+  display: none;
+}
+
+#assignmentPage h2 {
+  color: #bf272d;
+}
+
+#assignmentPage button {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 9px;
+  -webkit-box-shadow: 2px 2px 9px;
+  -moz-box-shadow: 2px 2px 9px;
+  -o-box-shadow: 2px 2px 9px;
+  background-color: #dbdbdb;
+  padding: 10px 20px;
+}
+
+#assignmentPage #assignmentsBack {
+  cursor: pointer;
+}
+
+/*End of Assignment page*/
+/*Start Announcement page*/
+#announcementPage {
+  display: none;
+}
+
+#announcementPage h2 {
+  color: #bf272d;
+}
+
+#announcementPage #announcementBack {
+  cursor: pointer;
+}
+
+/*End Announcement page*/
 /*# sourceMappingURL=styles.css.map */
