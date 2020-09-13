@@ -259,6 +259,30 @@ nav {
   }
 }
 /*End of Assignment page*/
+/*Start of online Classes page*/
+#onlineClassesPage {
+  display: none;
+  h2 {
+    color: $mainColor;
+  }
+
+  #onlineClassesBack {
+    cursor: pointer;
+  }
+}
+
+/*End of online Classes page*/
+/*Start of results page*/
+#resultsPage {
+  display: none;
+  h2 {
+    color: $mainColor;
+  }
+  #resultBack {
+    cursor: pointer;
+  }
+}
+/*End of results page*/
 /*Start Announcement page*/
 #announcementPage {
   display: none;

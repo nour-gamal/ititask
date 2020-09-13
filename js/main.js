@@ -87,6 +87,27 @@ $(function () {
     $("#dashboard").fadeIn(400);
   });
 
+  /*Handling Assignment page */
+  $("#onlineClassesCard").on("click", function () {
+    $("#dashboard").fadeOut(10);
+    $("#onlineClassesPage").fadeIn(400);
+  });
+
+  $("#onlineClassesBack").on("click", function () {
+    $("#onlineClassesPage").fadeOut(10);
+    $("#dashboard").fadeIn(400);
+  });
+
+  /*Handling result page */
+  $("#resultCard").on("click", function () {
+    $("#dashboard").fadeOut(10);
+    $("#resultsPage").fadeIn(400);
+  });
+  $("#resultBack").on("click", function () {
+    $("#resultsPage").fadeOut(10);
+    $("#dashboard").fadeIn(400);
+  });
+
   /*Start handling announcement page */
   $("#announcementCard").on("click", function () {
     $("#dashboard").fadeOut(10);
